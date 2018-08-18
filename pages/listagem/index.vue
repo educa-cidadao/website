@@ -1,8 +1,8 @@
 <template>
-  <body>
+  <div>
     <nav-bar/>
     <item-list/>
-  </body>
+  </div>
 </template>
 
 <script>
