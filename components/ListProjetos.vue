@@ -4,7 +4,7 @@
 
   <div class="container proposicoes__container">
       <div class="row proposicoes__row">
-          <div class="col-7 proposicoes__row__div">
+          <div class="col-7 proposicoes__row__div bg-warning">
               <span>{{ dinamic_title }}</span>
           </div>
       </div>
@@ -13,11 +13,15 @@
   <h3 class="container__projetos__title">Projetos em Tramitação</h3>
 
   <div class="row proposicoes__row">
-    <div class="col-xl-6 col-md-6 col-sm-12 container__projetos__col">
-      <span>Projeto 1</span>
+    <div class="col-xl-4 col-md-4 col-sm-12 container__projetos__col">
+      <div class="container__projetos__col--item">
+        <span class="container__projetos__col__span">{{ project }}</span>
+      </div>
     </div>
-    <div class="col-xl-6 col-md-6 col-sm-12 container__projetos__col">
-      <span>Projeto 1</span>
+    <div class="col-xl-8 col-md-8 col-sm-12 container__projetos__col">
+      <div class="container__projetos__col--item">
+        <span class="container__projetos__col__span-2">{{ project2 }}</span>
+      </div>
     </div>
   </div>
 
@@ -31,10 +35,12 @@
 export default {
   data() {
     return {
-      dinamic_title: '19 de Agosto de 2018',  
-      title: '',
-      card_subtitle: '',
-      text: ''
+      dinamic_title: '19 de Agosto de 2018',
+      project: 'Projeto de Lei 2345/2018',
+      project2: 'Sua sojds dksj dspdiud 9892k dslk ldskdlskd 290pl'
+      // title: '',
+      // card_subtitle: '',
+      // text: ''
     }
   },
   created: async function() {
@@ -59,7 +65,6 @@ export default {
   justify-content: center;
 }
 .proposicoes__row__div{
-    background:  #1D9A43;
     color:  white;
     height: 110px;
     text-align: center;
@@ -87,7 +92,19 @@ export default {
   text-align: center;
   padding: 20px 0;
 }
-.container__projetos__col span{
-  color: white;
+.container__projetos__col__span, .container__projetos__col__span-2{
+      color: white;
+    font-family: Arial;
+    font-size: 32px;
+}
+.container__projetos__col__span-2{
+  font-size: 18px;
+}
+.container__projetos__col--item{
+    width: 97%;
+    margin: 0 auto;
+    border: 2px solid white;
+    overflow: auto;
+    min-height: 100%;
 }
 </style>
