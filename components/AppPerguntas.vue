@@ -1,7 +1,6 @@
 <template>
 <div>
 <div class="row m-1">
-	<!-- exemplo -->
 	<div class="col-md-6 col-lg-4 mt-3">
 		<div class="card">
 		  <div class="front bg-primary">
@@ -23,7 +22,7 @@
 	<div class="col-md-6 col-lg-4 mt-3">
 		<div class="card">
 		  <div class="front bg-primary"><span>Você já ouviu falar no Dia da Amizade Brasil-Argentina?</span></div>
-		  <div class="back bg-warning"><span>A lei de Nº 13.664, de 14 de Maio de 2018 instituiu esse dia a ser celebrado todo dia 30 de novembro. Será que vai ter comemoração?</span></div>
+		  <div class="back bg-warning"><span> A lei de Nº 13.664, de 14 de Maio de 2018 instituiu esse dia a ser celebrado todo dia 30 de novembro. Será que vai ter comemoração?</span></div>
 		</div>	
 	</div>
 
@@ -68,18 +67,9 @@
 		  <div class="back bg-warning"><span>A PEC 10/2015 dispõe a ação pública de extinção caso essa posse seja proveniente de atividade criminosa, improbidade administrativa ou enriquecimento ilícito.</span></div>
 		</div>	
 	</div>
-
-
-
 </div>
-
 </div>
-
 </template>
-
-  <script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN" crossorigin="anonymous"></script>
-  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.12.9/umd/popper.min.js" integrity="sha384-ApNbgh9B+Y1QKtv3Rn7W3mgPxhU9K/ScQsAP7hUibX39j7fakFPskvXusvfa0b4Q" crossorigin="anonymous"></script>
-  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/js/bootstrap.min.js" integrity="sha384-JZR6Spejh4U02d8jOt6vLEHfe/JQGiRRSQQxSfFWpi1MquVdAyjUar5+76PVCmYl" crossorigin="anonymous"></script>
 <script>
 
 </script>

@@ -12,7 +12,7 @@ import AppPerguntas from '~/components/AppPerguntas.vue'
 export default {
   components: {
     NavBar,
-    AppPerguntas,
+    AppPerguntas
   }
 }
 
