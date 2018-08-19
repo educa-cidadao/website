@@ -1,9 +1,9 @@
 <template>
 <div>
   <nav-bar/>
-    <list-projetos/>
+  <list-projetos/>
 </div>
-    
+
 </template>
 
 <script>
