@@ -1,8 +1,8 @@
 <template>
-  <body>
+  <div>
     <nav-bar/>
     <timeline-item v-for="item in $store.state.proposicoes" :key="item.sequencia" :item="item" />
-  </body>
+  </div>
 </template>
 
 <script>
