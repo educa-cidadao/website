@@ -12,7 +12,8 @@
               </div>
               <div class="timeline__post">
                 <div class="timeline__content">
-                  <p>{{ item.descricaoTramitacao }}</p>
+                  <p class="descricao">{{ item.descricaoTramitacao }}</p>
+                  <p>{{ item.despacho }}</p>
                 </div>
               </div>
             </div>
@@ -38,6 +39,9 @@ export default {
 </script>
 
 <style>
+.descricao{
+  font-weight: bold;
+}
 
 .timeline{
   --uiTimelineMainColor: var(--timelineMainColor, #222);
@@ -119,6 +123,7 @@ export default {
 }
 
 .timeline__post{
+  margin-left: 5px;
   padding: 1.5rem 2rem;
   border-radius: 2px;
   border-left: 3px solid var(--uiTimelineMainColor);

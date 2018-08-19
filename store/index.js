@@ -4,8 +4,8 @@ import axios from 'axios'
 
 Vue.use(Vuex)
 
-const monthNames = ["Janeiro", "Fevereiro", "Março", "Abril", "Maio",
-    "Junho", "Julho", "Agosto", "Setembro", "Outubro", "Novembro", "Dezembro"];
+const monthNames = ["Jan", "Fev", "Mar", "Abr", "Mai",
+    "Jun", "Jul", "Ago", "Set", "Out", "Nov", "Dez"];
 
 const store = () => new Vuex.Store({
   state: {
