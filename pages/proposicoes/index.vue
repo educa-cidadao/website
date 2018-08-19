@@ -1,5 +1,5 @@
 <template>
-  <body>
+  <div>
     <nav-bar/>
     <div class="container proposicoes__container">
         <div class="row proposicoes__row">
