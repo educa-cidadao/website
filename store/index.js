@@ -10,18 +10,27 @@ const monthNames = ["Jan", "Fev", "Mar", "Abr", "Mai",
 const store = () => new Vuex.Store({
   state: {
     data: [],
-    proposicoes: []
+    proposicoes: [],
+    tramitacoes: [],
+    dictionaryProposicoes: {},
+    dictionaryTramitacoes: {}
   },
   mutations: {
     SET_PROPOSICOES (state, proposicoes) {
-      proposicoes.forEach( function(proposicao) {
-        proposicao.dataHora = new Date(proposicao.dataHora)
-        proposicao.ano = proposicao.dataHora.getFullYear()
-        proposicao.dia = proposicao.dataHora.getDay()
-        proposicao.mes = monthNames[proposicao.dataHora.getMonth()]
+      state.proposicoes = proposicoes
+    },
+    SET_TRAMITACOES (state, tramitacoes) {
+      tramitacoes.forEach( function(tramitacao) {
+        tramitacao.dataHora = new Date(tramitacao.dataHora)
+        tramitacao.ano = tramitacao.dataHora.getFullYear()
+        tramitacao.dia = tramitacao.dataHora.getDay()
+        tramitacao.mes = monthNames[tramitacao.dataHora.getMonth()]
       })
-
-      state.proposicoes = proposicoes.reverse()
+      state.tramitacoes = tramitacoes.reverse()
+      state.dictionaryTramitacoes[tramitacoes[0].id] = tramitacoes
+    },
+    SET_PROPOSICAO (state, proposicao) {
+      state.dictionaryProposicoes[proposicao.id] = proposicao
     }
   },
   actions: {
