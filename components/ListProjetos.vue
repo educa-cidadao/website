@@ -9,21 +9,63 @@
           </div>
       </div>
   </div>
-  <div class="bg-secondary container proTra__container">
+  <div class="container proTra__container" style="background-color: #a4a59d!important;">
   <h3 class="container__projetos__title">Projetos em Tramitação</h3>
 
   <div class="row proposicoes__row">
     <div class="col-xl-4 col-md-4 col-sm-12 container__projetos__col">
       <div class="container__projetos__col--item">
-        <span class="container__projetos__col__span">{{ project }}</span>
+        <span class="container__projetos__col__span">{{ siglaTipo +" "+ numero + "/" + ano }}</span>
       </div>
     </div>
     <div class="col-xl-8 col-md-8 col-sm-12 container__projetos__col">
       <div class="container__projetos__col--item">
-        <span class="container__projetos__col__span-2">{{ project2 }}</span>
+        <span class="container__projetos__col__span-2">{{ ementa }}</span>
       </div>
     </div>
+
   </div>
+
+
+  </div>
+
+    <div class="container proTra__container" style="background: #8bb1b1;">
+  <h3 class="container__projetos__title">Projetos Sancionados</h3>
+
+  <div class="row proposicoes__row">
+    <div class="col-xl-4 col-md-4 col-sm-12 container__projetos__col">
+      <div class="container__projetos__col--item">
+        <span class="container__projetos__col__span"> {{ siglaTipo +" "+ numero + "/" + ano }} </span>
+      </div>
+    </div>
+    <div class="col-xl-8 col-md-8 col-sm-12 container__projetos__col">
+      <div class="container__projetos__col--item">
+        <span class="container__projetos__col__span-2">{{ ementa }}</span>
+      </div>
+    </div>
+
+  </div>
+
+
+  </div>
+
+    <div class="container proTra__container" style="background: #b98181;">
+  <h3 class="container__projetos__title">Projetos Vetados</h3>
+
+  <div class="row proposicoes__row">
+    <div class="col-xl-4 col-md-4 col-sm-12 container__projetos__col">
+      <div class="container__projetos__col--item">
+        <span class="container__projetos__col__span"> {{ siglaTipo +" "+ numero + "/" + ano }} </span>
+      </div>
+    </div>
+    <div class="col-xl-8 col-md-8 col-sm-12 container__projetos__col">
+      <div class="container__projetos__col--item">
+        <span class="container__projetos__col__span-2">{{ ementa }}</span>
+      </div>
+    </div>
+
+  </div>
+
 
   </div>
 
@@ -36,11 +78,10 @@ export default {
   data() {
     return {
       dinamic_title: '19 de Agosto de 2018',
-      project: 'Projeto de Lei 2345/2018',
-      project2: 'Sua sojds dksj dspdiud 9892k dslk ldskdlskd 290pl'
-      // title: '',
-      // card_subtitle: '',
-      // text: ''
+      ementa: '',
+      numero: '',
+      ano: '',
+      siglaTipo: '',
     }
   },
   created: async function() {
@@ -48,12 +89,13 @@ export default {
     // this.dinamic_title = dinamic_title
 
 
-    // let data = await this.$axios.$get('https://dadosabertos.camara.leg.br/api/v2/proposicoes?ordem=ASC&ordenarPor=id')
-    // let dataProposition = await this.$axios.$get('https://dadosabertos.camara.leg.br/api/v2/proposicoes/14306')
-    // this.title = dataProposition.dados.descricaoTipo
-    // this.card_subtitle = dataProposition.dados.ementa
-    // this.text = dataProposition.dados.ementaDetalhada
-  }
+    let dataProposition = await this.$axios.$get('https://dadosabertos.camara.leg.br/api/v2/proposicoes/14306')
+    this.ementa = dataProposition.dados.ementa
+    this.numero = dataProposition.dados.numero
+    this.ano = dataProposition.dados.ano
+    this.siglaTipo = dataProposition.dados.siglaTipo
+
+  },
 }
 </script>
 
@@ -87,6 +129,8 @@ export default {
 }
 .proTra__container{
   margin-top: 3vw;
+  padding: 0 35px;
+  border-radius: 20px;
 }
 .container__projetos__col{
   text-align: center;
@@ -95,7 +139,7 @@ export default {
 .container__projetos__col__span, .container__projetos__col__span-2{
       color: white;
     font-family: Arial;
-    font-size: 32px;
+    font-size: 26px;
 }
 .container__projetos__col__span-2{
   font-size: 18px;

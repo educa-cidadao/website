@@ -1,22 +1,23 @@
 <template>
-<div>
-  <nav-bar/>
+  <div>
+    <nav-bar/>
     <list-projetos/>
-</div>
-    
+  </div>
 </template>
 
 <script>
-import NavBar from "~/components/NavBar.vue";
-import ListProjetos from "~/components/ListProjetos.vue";
+import NavBar from '~/components/NavBar.vue'
+import ListProjetos from '~/components/ListProjetos.vue'
 
 export default {
   components: {
     NavBar,
-    ListProjetos
+    ListProjetos,
   }
-};
+}
+
 </script>
 
 <style>
+
 </style>
