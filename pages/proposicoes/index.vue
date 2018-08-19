@@ -1,8 +1,8 @@
 <template>
-  <div>
+  <body>
     <nav-bar/>
     <list-projetos/>
-  </div>
+  </body>
 </template>
 
 <script>
